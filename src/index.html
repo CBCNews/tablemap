@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html class="no-js">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="HandheldFriendly" content="True">
+        <meta name="MobileOptimized" content="320"/>
+        <meta name="viewport" content="width=device-width; initial-scale=1; user-scalable=1;">
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta names="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+        <meta http-equiv="cleartype" content="on">
+
+        <link rel="stylesheet" type="text/css" media="screen" href="/i/podium/news.css"/>
+        <link rel="stylesheet" type="text/css" media="screen" href="/news2/interactives/css/non-polopolypage.css"/>
+
+        <link rel="stylesheet" href="/news2/interactives/css/leaflet/leaflet.css" />
+        <link rel="stylesheet" href="/news2/interactives/css/leaflet/MarkerCluster.css" />
+        <link rel="stylesheet" href="/news2/interactives/css/leaflet/MarkerCluster.Default.css" />
+        <!--[if lte IE 8]>
+            <link rel="stylesheet" href="/news2/interactives/css/leaflet/leaflet.ie.css" />
+            <link rel="stylesheet" href="/news2/interactives/css/leaflet/MarkerCluster.Default.ie.css" />
+        <![endif]-->
+        <link rel="stylesheet" href="/news2/interactives/css/bootstrap/v3/bootstrap.min.css" />
+
+        <link rel='stylesheet' type='text/css' href='http://api.tiles.mapbox.com/mapbox.js/v1.0.0/mapbox.css'  />
+        <link rel="stylesheet" type="text/css" href="css/app.css" />
+        <!--[if IE]>
+            <link rel="stylesheet" type="text/css" href="css/app-ie.css" />
+        <![endif]-->
+
+        <script src="/news2/interactives/js/modernizr/2.6.2/modernizr.min.js"></script>
+
+    </head>
+    <body>
+
+        <div class="interactive">
+
+            <div id="sidebar">
+                <div class="sidebar_header">
+
+                    <h3 id="map-title"></h3>
+
+                    <div id="map-intro">
+                        <p>
+
+                        </p>
+                    </div>
+
+                    <div id="share">
+                        <ul>
+                        <li class="float_left">
+                            <a data-text="" href="http://twitter.com/share" class="twitter-share-button"
+                                data-count="horizontal">Tweet</a>
+                            <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+                        </li>
+                        <li class="float_left">
+                            <g:plusone size="medium"></g:plusone>
+                        </li>
+                        <li>
+                            <div id="fb-root"></div>
+                            <script src="http://connect.facebook.net/en_US/all.js#appId=161694630579757&amp;xfbml=1"></script><fb:like href="" send="false" layout="button_count" width="90" show_faces="false" font="">
+                            </fb:like>
+                        </li>
+                        </ul>
+                    </div>
+
+                </div>
+
+
+                <div class="sidebar_content">
+
+                        <div id="sidebar-intro">
+
+                        </div>
+
+                        <div id="sidebar-entries">
+
+                        </div>
+
+                        <div class="toggle_about btn" type="button">
+                            About this map
+                        </div>
+
+                </div>
+            </div>
+
+
+            <div class="description_box">
+                <div class="x_button toggle_description btn btn-primary" type="button">
+                    <strong>X</strong>
+                </div>
+                <div class="description_box_header"></div>
+                <div class="description_box_content">
+                    <div class="description_box_text"></div>
+                    <div id="caption_box"></div>
+                </div>
+            </div>
+            <div class="description_box_cover"></div>
+
+            <div id="map"></div>
+
+
+
+        </div>
+
+
+        <script src="/news2/interactives/js/jquery/jquery-1.9.1.min.js"></script>
+        <script src="/news2/interactives/js/handlebars/1.3.0/handlebars.js"></script>
+        <script src="/news2/interactives/js/tabletop/1.3.4/tabletop.js"></script>
+        <script src="/news2/interactives/js/leaflet/leaflet.js"></script>
+        <script src="/news2/interactives/js/leaflet/leaflet.markercluster-src.js"></script>
+        <script src="/news2/interactives/js/helpers.js"></script>
+        <script src="js/app.js"></script>
+
+    </body>
+</html>
