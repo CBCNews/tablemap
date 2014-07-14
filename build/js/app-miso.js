@@ -60,11 +60,9 @@ jqueryNoConflict(document).ready(function(){
 
 function initializeDataFeed(dataType, dataKey, dataPath){
 
-    /& Grab dataset (ds) and Data Meta (dm) based on URL query */
+    /* Grab dataset (ds) and Data Meta (dm) based on URL query */
 
     if(dataType == 'gss'){
-
-        console.log("GSS GSS");
 
         ds = new Miso.Dataset({
             importer:   Miso.Dataset.Importers.GoogleSpreadsheet,
@@ -87,8 +85,6 @@ function initializeDataFeed(dataType, dataKey, dataPath){
     if(dataType == 'csv'){
 
         dataURL = '/webmill/news/interactives/data/' + dataPath;
-
-        console.log("CSV CSV : " + dataPath + ' -->>> "' + dataURL + '"');
 
         ds = new Miso.Dataset({
             url: dataURL,
