@@ -3,12 +3,11 @@ module.exports = function(grunt) {
     /* Define the files and directories that we're working with.  */
     var sourceDirectory             = 'src/';
     var buildDirectory              = 'build/';
-    var deployDirectory             = '<PATH TO LOCAL DEV SERVER ROOT>';
+    var deployDirectory             = '/Users/michael/Sites/cbc-ca/news2/interactives/map/';
 
     var htmlSource                  = [
-                                        'index.html',
-                                        'interactive.html'
-                                        ];
+                                        'index.html'
+                                    ];
 
     var buildAssets                 = [
                                         'data/**',
@@ -20,28 +19,19 @@ module.exports = function(grunt) {
 
     /* Output file defined in tasks below */
     var cssVendorSource             = [ ];
-    var cssAppSource                = [ 'src/css/app.scss' ];
-    var cssAppMediaQueriesSource    = [ 'src/css/media-queries.scss' ];
+    var cssAppSource                = [ 'src/sass/app.scss' ];
+    var cssAppMediaQueriesSource    = [ 'src/sass/media-queries.scss' ];
 
 
     /* Deploy unconcatenated copy of vendor JS */
     var jsVendorCopyThruFiles       = {
-       'src/js/vendor/aight.js'                     : 'bower_components/aight/aight.js',
-       'src/js/vendor/aight.d3.js'                  : 'bower_components/aight/aight.d3.js',
-       'src/js/vendor/d3.js'                        : 'bower_components/d3/d3.js',
-       'src/js/vendor/handlebars.js'                : 'bower_components/handlebars/handlebars.js',
-       'src/js/vendor/html5shiv.js'                 : 'bower_components/html5shiv/dist/html5shiv.js',
-       'src/js/vendor/jquery.js'                    : 'bower_components/jquery/dist/jquery.js',
-       'src/js/vendor/miso.ds.deps.ie.0.4.1.js'     : 'bower_components/miso.dataset/dist/miso.ds.deps.ie.0.4.1.js',
-       'src/js/vendor/modernizr.js'                 : 'bower_components/modernizr/modernizr.js'
+
     };
 
 
     /* Vendor JS to concatenate, excludes shims, etc. */
     var jsVendorSource              = [
-                                        'bower_components/d3/d3.js',
-                                        'bower_components/handlebars/handlebars.js',
-                                        'bower_components/miso.dataset/dist/miso.ds.deps.ie.0.4.1.js'
+
                                         ];
 
     var jsAppSource                 = [ 'src/js/app.js' ];
@@ -126,19 +116,7 @@ module.exports = function(grunt) {
                 src: '**',
                 dest: deployDirectory,
             }
-        },
-
-        browserSync: {
-            dev: {
-                bsFiles: {
-                    src : 'assets/css/style.css'
-                },
-                options: {
-                    proxy: "local.dev",
-                    watchTask: true
-                }
-            }
-        },
+        }
 
     });
 
@@ -152,6 +130,6 @@ module.exports = function(grunt) {
     grunt.registerTask('copyer', ['copy']);
     grunt.registerTask('deployPreview', ['copy:deployLocal']);
 
-    grunt.registerTask('default', ['autoprefixer', 'sass', 'concat', 'clean', 'copy:html', 'copy:vendorJSFilesThruCopy', 'copy:assets' ]);
+    grunt.registerTask('default', ['sass', 'concat', 'clean', 'copy:html', 'copy:vendorJSFilesThruCopy', 'copy:assets' ]);
 
 };

@@ -1,7 +1,7 @@
 tablemap
 ========
 
-Maps powered by Miso Dataset &amp; Google Spreadsheet
+Maps powered by Miso Dataset &amp; Google Spreadsheet. Compatible with live gss feed or a quota-safe cache.
 
 
 Clone the repo and run npm to install Grunt requirements
@@ -35,9 +35,12 @@ Clone the repo and run npm to install Grunt requirements
 
 
 **key**
-title
-intro_text
-sidebar-intro
-map_about
-map_credits
-map_source
+
+* title
+* intro_text
+* sidebar-intro
+* map_about
+* map_credits
+* map_source
+
+
