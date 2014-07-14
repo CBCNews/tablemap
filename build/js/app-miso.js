@@ -76,7 +76,7 @@ function initializeDataFeed(dataType, dataKey, dataPath){
             importer:   Miso.Dataset.Importers.GoogleSpreadsheet,
             parser:     Miso.Dataset.Parsers.GoogleSpreadsheet,
             key:        dataKey,
-            worksheet:  "2"
+            worksheet:  "0"
         });
 
 
